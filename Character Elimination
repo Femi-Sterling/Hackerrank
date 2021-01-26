@@ -1,0 +1,33 @@
+#include <stdio.h>
+#include <string.h>
+#include <math.h>
+#include <stdlib.h>
+
+int main() {
+    char s[100],t[100],rem[100];
+    int i=0,j=0,k=0;
+    fflush(stdin);
+    scanf("%s",s);
+    scanf("%s",t);
+    for(i=0;s[i]!='\0';i++)
+    {
+        for(j=0;t[j]!='\0';j++)
+        {
+            if (s[i] == t[j])
+            {
+                continue;
+            }
+            else{
+                rem[k] = t[j];
+                    k++;
+            }
+        }
+        rem[k]='\0';
+        strcpy(t,rem);
+        k=0;
+    }
+    printf("%s\n",rem);
+    
+                    
+    return 0;
+}
